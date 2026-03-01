@@ -1,0 +1,10 @@
+server:
+  port: 8080 # O el puerto que asigne el proveedor de nube
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    # Aquí irían las IPs de otros servidores Eureka en la nube
+
+    # Por llenar...

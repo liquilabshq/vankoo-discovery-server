@@ -1,0 +1,26 @@
+#file: noinspection HttpUrlsUsage
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: false # En desarrollo, no es necesario usar la dirección IP, podemos usar localhost para facilitar las pruebas
+  client:
+    register-with-eureka: false # En desarrollo, no registramos el servidor Eureka a sí mismo
+    fetch-registry: false # En desarrollo, no necesitamos que Eureka busque otros servicios
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ # Es la dirección donde los demás servicios buscarán Eureka, en desarrollo es localhost
+  server:
+    enable-self-preservation: false # En desarrollo, deshabilitamos la autopreservación para facilitar las pruebas
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,info" # En desarrollo, exponemos solo los endpoints de salud e información para evitar riesgos de seguridad
+
+logging:
+  level:
+    com.netflix: DEBUG # En desarrollo, queremos ver más detalles de las interacciones de Eureka para facilitar la depuración
+    org.springframework.cloud: DEBUG # También queremos ver detalles de Spring Cloud para entender mejor el comportamiento del servidor Eureka en desarrollo
