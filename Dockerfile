@@ -11,6 +11,8 @@ RUN mvn clean package -DskipTests
 # Etapa 2: Imagen final ligera
 FROM eclipse-temurin:25-jre-jammy
 WORKDIR /app
+# Instamos curl para que funcione el health check y limpiamos cache de apt
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 # Creamos un usuario sin privilegios por seguridad (Buena práctica de arquitectura)
 RUN addgroup --system spring && adduser --system spring --ingroup spring
 USER spring
