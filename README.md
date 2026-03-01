@@ -18,6 +18,10 @@ mvn clean package -DskipTests
 
 El archivo generado se ubicará en `target/discovery-server-0.0.1-SNAPSHOT.jar`.
 
+## Ejecución Local
+
+Puedes ejecutar el servicio localmente desde IntelliJ, pero su configuración está optimizada para correr dentro de Docker. Si deseas ejecutarlo localmente, asegúrate de configurar el perfil `dev` para cargar la configuración adecuada
+
 ## Uso con Docker
 
 Este servicio está diseñado para integrarse con el repositorio `vankoo-infra`.
