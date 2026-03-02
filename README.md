@@ -16,7 +16,15 @@ Para generar el artefacto ejecutable (JAR), corre el siguiente comando en la ra�
 mvn clean package -DskipTests
 ```
 
-El archivo generado se ubicará en `target/discovery-server-0.0.1-SNAPSHOT.jar`.
+También puedes hacerlo usando la interfaz de IntelliJ:
+
+1. Abre el proyecto en IntelliJ.
+2. Navega a la pestaña "Maven" en el panel lateral derecho.
+3. Expande el proyecto y luego la sección "Lifecycle".
+4. Haz doble clic en "clean" para limpiar el proyecto.
+5. Haz doble clic en "package" para compilar y empaquetar el proyecto. Puedes usar el botón "Toggle Skip Tests" para omitir las pruebas si lo deseas.
+
+Independientemente de la opción elegida, el archivo generado se ubicará en `target/discovery-server-0.0.1-SNAPSHOT.jar`.
 
 ## Ejecución Local
 
