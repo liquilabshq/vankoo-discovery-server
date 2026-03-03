@@ -37,13 +37,13 @@ Este servicio está diseñado para integrarse con el repositorio `vankoo-infra`.
 1. Si ya tenías contenedores de vankoo-infra, levanta solo el Discovery Server en el repositorio de infraestructura:
 
     ```bash
-    docker compose up --build discovery-server
+    docker compose up -d --build discovery-server
     ```
 
 2. Si es la primera vez que levantas vankoo-infra, simplemente corre en vankoo-infra:
 
     ```bash
-    docker compose up --build
+    docker compose up -d --build
     ```
    
 ## Endpoints de Utilidad
