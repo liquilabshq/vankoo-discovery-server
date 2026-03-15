@@ -25,6 +25,8 @@ Se usó la última versión de Spring Boot (4.0.2) y se seleccionaron las siguie
 - **Eureka Server:** Para configurar este proyecto como un servidor de Eureka, permitiendo que otros microservicios se registren y descubran entre sí.
 - **Spring Boot Actuator:** Para exponer endpoints de monitoreo y salud del servicio.
 
-No hacen falta otras dependencias como Spring Web, Data JPA, etc., ya que este servicio se enfoca exclusivamente en el registro y descubrimiento de servicios a través de Eureka, sin necesidad de manejar lógica de negocio adicional o acceso a bases de datos.
+No hacen falta dependencias como Spring Web, Data JPA, etc., ya que este servicio se enfoca exclusivamente en el registro y descubrimiento de servicios a través de Eureka, sin necesidad de manejar lógica de negocio adicional o acceso a bases de datos.
 
 ![Setup-2](../images/setup-2.png)
+
+Posteriormente, se agregó únicamente la dependencia de  **Caffeine**, para incorporar una caché en memoria de alto rendimiento, útil para optimizar operaciones frecuentes y reducir carga en componentes internos. No se añadieron otras dependencias ya que el enfoque principal del servicio es ser un servidor de Eureka ligero y eficiente, sin necesidad de funcionalidades adicionales que podrían complicar su mantenimiento o rendimiento.

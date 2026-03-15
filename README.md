@@ -64,3 +64,7 @@ El proyecto utiliza perfiles para separar entornos:
 
 - **Self-Preservation:** En el perfil `dev/docker`, el modo de autopreservación está desactivado. Esto permite que Eureka limpie instantáneamente los servicios que se desconectan durante las pruebas. No te asustes por el mensaje en rojo en el dashboard, es normal en este modo.
 - **Healthcheck:** El contenedor Docker utiliza `curl` para reportar su estado. Si el status es `unhealthy`, verifica que el servicio haya terminado de arrancar correctamente (toma ~20-30s).
+
+## Información Adicional
+
+Puedes encontrar más detalles sobre el proyecto en el directorio de [Documentación](/docs), donde se agregaron guías en markdown y demás documentación relevante para el desarrollo y mantenimiento del servicio.
